@@ -1,0 +1,25 @@
+{% extends 'Teacher/teacherindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="283" border="1" cellpadding="4" class="table table-bordered">
+{#    <tr>#}
+{#      <th colspan="2" scope="col">View Instructions from admin </th>#}
+{#    </tr>#}
+    <tr>
+      <td width="86">Sl No</td>
+      <td width="86">Date</td>
+      <td width="169">Instructions</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ forloop.counter }}</td>
+      <td>&nbsp;{{ i.instructions_details }}</td>
+      <td>&nbsp;{{ i.date }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}
